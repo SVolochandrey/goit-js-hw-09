@@ -24,12 +24,12 @@ for (let i = 1; i <= inputAmount; i += 1) {
 createPromise (i, inputDelay)
 .then(({position, delay}) => {
 Notiflix.Notify.success(
-'✅ Fulfilled promise ${position} in ${delay}ms'
+`✅ Fulfilled promise ${position} in ${delay}ms`
 );
 })
 .catch(({position,delay}) => {
 Notiflix.Notify.failure(
-'❌ Rejected promise ${position} in ${delay}ms'
+`❌ Rejected promise ${position} in ${delay}ms`
 );
 });
 inputDelay += inputDelayStep;
