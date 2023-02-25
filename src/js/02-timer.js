@@ -4,11 +4,11 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from "notiflix";
 
 const input = document.querySelector('#datetime-picker');
-const button = document.querySelector('[data-start');
-const daysEl = document.querySelector('[data-days');
-const hoursEl = document.querySelector('[data-hours');
-const minutesEl = document.querySelector('[data-minutes');
-const secondsEl = document.querySelector('[data-seconds');
+const button = document.querySelector('[data-start]');
+const daysEl = document.querySelector('[data-days]');
+const hoursEl = document.querySelector('[data-hours]');
+const minutesEl = document.querySelector('[data-minutes]');
+const secondsEl = document.querySelector('[data-seconds]');
 
 let timer = null;
 
@@ -48,9 +48,9 @@ const countdownTime = selectedTime - currentTime;
 const {days, hours, minutes, seconds} = convertMs(countdownTime);
 
 daysEl.textContent = addLeadingZero(days);
-hours.textContent = addLeadingZero(hours);
-minutes.textContent = addLeadingZero(minutes);
-seconds.textContent = addLeadingZero(seconds);
+hoursEl.textContent = addLeadingZero(hours);
+minutesEl.textContent = addLeadingZero(minutes);
+secondsEl.textContent = addLeadingZero(seconds);
 
 if(countdownTime < 1000){
 clearInterval(timer);
